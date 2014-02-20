@@ -22,7 +22,7 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    
+
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.inline-png-1.4.1.min.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.1.min.css" />
@@ -53,19 +53,64 @@
 
     <!-- Start of second page -->
     <div data-role="page" id="bar">
-
         <div data-role="header">
-            <h1>Bar</h1>
-        </div><!-- /header -->
+            <h2>Service</h2>
+            <a href="#home" data-icon="back" class="ui-btn-right" rel="external" data-iconpos="notext" style="background: #848274;">Back</a>
+        </div>
+        
+        <div data-role="content">
+            <div data-role="collapsible-set" >
+                <div data-role="collapsible" data-expanded-icon="info">
+                    <h2>Impressum</h2>
+                    <p>
+                        <h3>VCS Vereinigung der Campingplatzbetreiber Südtirols</h3>
+                        MwSt.Nr und Steuernr. / Cod. Fisc. + Part. IVA : 01701300210<br />
+                        info@campingsuedtirol.com<br />
+                        I-39100 Bozen/Bolzano<br />
+                        Moritzinger Weg 83/Via S. Maurizio 83
+                    </p>
+                </div>
+                <div data-role="collapsible" data-expanded-icon="info">
+                    <h2>Partner</h2>
+                    <p>
+                        <ul data-role="listview">
+                            <li data-mini="true"><a rel="external" href="http://www.derfreistaat.de/" target="_blank">www.derfreistaat.de</a></li>
+                            <li data-mini="true"><a rel="external" href="http://www.glueck-freizeitmarkt.de/" target="_blank">www.glueck-freizeitmarkt.de</a></li>
+                        </ul>
+                    </p>
+                </div>
+                <div data-role="collapsible" data-expanded-icon="info">
+                    <h2>Weitere Services</h2>
+                    <p>
+                        <ul data-role="listview">
+                            <li data-mini="true"><a rel="external" href="http://www.sentres.com/de/suedtirol" target="_blank">Sentres S&uuml;dtirol</a></li>
+                            <li data-mini="true"><a rel="external" href="http://www.provinz.bz.it/wetter/" target="_blank">Wetter</a></li>
+                            <li data-mini="true"><a rel="external" href="http://www.provinz.bz.it/vmz/report/index_d.asp" target="_blank">Verkehr</a></li>
+                            <li data-mini="true"><a rel="external" href="http://www.youtube.com/watch?v=g5V3mJEE6bw" target="_blank">Film</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <input id="update" type="button" value="Update" data-icon="refresh" style="width: 100%;text-align:left" />
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:localStorage.setItem( 'lang', 0 );window.location='index.html';">DE</a></li>
+                    <li><a href="javascript:localStorage.setItem( 'lang', 1 );window.location='index.html';">EN</a></li>
+                    <li><a href="javascript:localStorage.setItem( 'lang', 3 );window.location='index.html';">IT</a></li>
+                    <li><a href="javascript:localStorage.setItem( 'lang', 6 );window.location='index.html';">NL</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <div role="main" class="ui-content">
-            <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-            <p><a href="#foo">Back to foo</a></p>
-        </div><!-- /content -->
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#services-page" class="ui-btn-active ui-state-persist" data-icon="info">Service</a></li>
+                </ul>
+            </nav>
+        </footer>
 
-        <div data-role="footer">
-            <h4>Page Footer</h4>
-        </div><!-- /footer -->
     </div><!-- /page -->
 
 
